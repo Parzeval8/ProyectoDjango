@@ -1,0 +1,15 @@
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+    <h1> prueba opag </h1>
+
+    <h5>mi nombre es: {{nomb}} {{apell}}</h5>
+
+    <ul>
+        {% for valor in dato %}
+            <li> {{valor}} </li>
+        {% endfor %}
+    </ul>
+
+{% endblock  %}
+
