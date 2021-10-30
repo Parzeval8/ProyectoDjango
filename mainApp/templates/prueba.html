@@ -5,11 +5,39 @@
 
     <h5>mi nombre es: {{nomb}} {{apell}}</h5>
 
-    <ul>
-        {% for valor in dato %}
-            <li> {{valor}} </li>
-        {% endfor %}
-    </ul>
+    {% if estado %}
+    
+        {% comment %} <ul>
+            {% for alumno in dato %}
+                <li> {{alumno.nombre}} </li>
+            {% endfor %}
+        </ul> {% endcomment %}
+
+        <table class='table'>
+            <thead>
+                <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>Nombre</th>
+                <th scope='col'>Documento</th>
+                <th scope='col'>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for alumno in dato %}
+                    <tr>
+                        <th scope='row'>{{alumno.id}}</th>
+                        <td>{{alumno.nombre}}</td>
+                        <td>{{alumno.documento}}</td>
+                        <td>{{alumno.telefono}}</td>
+                    </tr>                
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    {% endif %}
+
+    
 
 {% endblock  %}
 

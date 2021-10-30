@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.inicio, name='index'),
     path('inicio/', mainApp.views.inicio, name='inicio'),
-    path('prueba/', mainApp.views.prueba, name='prueba')
+    path('prueba/', mainApp.views.prueba, name='prueba'),
+    path('guardar-alumno/<str:nombre>/<int:documento>/<int:telefono>', mainApp.views.guardar_alumno, name='guardar-alumno'),
+    path('mostrar-alumno/', mainApp.views.mostrar_alumno, name='mostrar_alumno')
 ]
